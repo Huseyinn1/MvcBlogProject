@@ -1,0 +1,43 @@
+﻿@using LoginRegisterPage.Entities
+@model List<User>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+  
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h3>Kayıtlı Kullanıcılar</h3>
+        </div>
+<table class="table table-bordered table-striped table-sm">
+    <thead>
+        <tr>
+
+            <th>Username</th>
+            <th>NameSurname</th>
+            <th>Katıldığı Tarih</th>
+            <!-- Diğer kullanıcı özellikleri eklenebilir -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                
+                <td>@user.UserName</td>
+              <td>@user.NameSurname</td>
+              <td>@user.CreatedAt</td>
+                <!-- Diğer kullanıcı özellikleri eklenebilir -->
+            </tr>
+        }
+    </tbody>
+</table>
+    </div>
+</body>
+</html>

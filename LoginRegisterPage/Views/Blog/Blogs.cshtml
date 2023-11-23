@@ -1,0 +1,100 @@
+﻿@model IEnumerable<LoginRegisterPage.Entities.Blog>
+
+
+<html lang="en">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="/static/css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="static/js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<body class="host_version"> 
+
+	<!-- Modal -->
+
+
+    <!-- LOADER -->
+
+	<!-- END LOADER -->	
+
+    <!-- Start header -->
+
+	<!-- End header -->
+	
+
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+    
+    
+ <a href="/Blog/Add_Blog" class="btn btn-primary">Yeni Blog Ekle</a>
+            <hr class="invis"> 
+
+            <div class="row"> 
+                 @foreach (var blog in Model)
+                {
+                    
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="course-item">
+						<div class="image-blog">
+							<img src="/static/images/blog_1.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="/Blog/Blog_Detail?id=@blog.Id" title="">@blog.Title</a></h2>
+                            
+							</div>
+							<div class="course-desc">
+								<p>@(blog.Content.Length > 200 ? blog.Content.Substring(0, 200) + "..." : blog.Content)</p>
+							</div>
+						
+						</div>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> @blog.CreatedAt.ToShortDateString()</li>
+								
+							</ul>
+                            <ul>
+								<li><i class="fa fa-user" aria-hidden="true"></i></li>
+								
+							</ul>
+						</div>
+                         <br />
+					</div>
+                </div><!-- end col -->
+	                
+            }
+
+            </div><!-- end row -->
+			
+		
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+   
+
+
+    <!-- ALL JS FILES -->
+    <script src="/static/js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="/static/js/custom.js"></script>
+
+</body>
+</html>
