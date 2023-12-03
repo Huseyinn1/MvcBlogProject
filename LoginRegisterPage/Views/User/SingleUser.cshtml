@@ -1,0 +1,60 @@
+﻿@using MvcBlog.Entities
+@model User
+
+@{
+    ViewData["Title"] = "Profile's";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="display-4 text-center border-bottom pb-2"> @ViewData["Title"] @Model.UserName</h1>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-3">
+            <div asp-validation-summary="All" class="text-danger small mb-4"></div>
+
+            <div class="text-center mb-3">
+                <label class="form-label small mb-2">Profil İmage</label>
+                <img src="~/uploads/@Model.ProfilImageFileName" width="128" class="img-thumbnail rounded-circle" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label small">Name Surname</label>
+                <div class="form-control">@Model.NameSurname</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label small">Username</label>
+                <div class="form-control">@Model.UserName</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label small">Created Date</label>
+                <div class="form-control">@Model.CreatedAt.ToString("dd.MM.yyyy")</div>
+            </div>
+              <div class="form-group">
+                <label class="form-label small">Role</label>
+                <div class="form-control">@Model.Role</div>
+            </div>
+                <div class="form-group">
+                <label class="form-label small">Role</label>
+                
+            </div>
+            <div class="col-md-6">
+    <h4 class="mt-4">User's Latest Blogs</h4>
+    <ul>
+        @foreach (var blog in ViewData["UserBlogs"] as List<Blog>)
+        {   
+          <li><a href="@Url.Action("Blog_Detail", "Blog", new { id = blog.Id })">@blog.Title</a></li>
+        
+            
+        }
+    </ul>
+</div>
+            
+        </div>
+    </div>
+</div>

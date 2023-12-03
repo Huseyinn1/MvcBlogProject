@@ -1,4 +1,4 @@
-namespace LoginRegisterPage.Models
+namespace MvcBlog.Models
 {
     public class ErrorViewModel
     {

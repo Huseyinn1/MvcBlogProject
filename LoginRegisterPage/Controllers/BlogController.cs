@@ -1,9 +1,9 @@
-﻿using LoginRegisterPage.Entities;
-using LoginRegisterPage.Models;
+﻿using MvcBlog.Entities;
+using MvcBlog.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
-namespace LoginRegisterPage.Controllers
+namespace MvcBlog.Controllers
 {
     public class BlogController : Controller
     {

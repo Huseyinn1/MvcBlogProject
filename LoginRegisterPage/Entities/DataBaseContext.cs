@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace LoginRegisterPage.Entities
+namespace MvcBlog.Entities
 {
     public class DataBaseContext : DbContext
     {
@@ -8,7 +8,8 @@ namespace LoginRegisterPage.Entities
         {
         }
 
-        public DbSet<User> Users { get; set; }
-public DbSet<Blog> Blogs { get; set; }
+        public DbSet<User> Users { get; set; } 
+         public DbSet<Blog> Blogs { get; set; }
+         public DbSet<Comment> Comments { get; set; }
     }
 }

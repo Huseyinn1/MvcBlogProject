@@ -1,6 +1,6 @@
-﻿using LoginRegisterPage.Entities;
+﻿using MvcBlog.Entities;
 
-namespace LoginRegisterPage.Models
+namespace MvcBlog.Models
 {
     public class BlogDetailViewModel
     {

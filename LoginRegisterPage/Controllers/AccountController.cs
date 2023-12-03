@@ -1,5 +1,5 @@
-﻿using LoginRegisterPage.Entities;
-using LoginRegisterPage.Models;
+﻿using MvcBlog.Entities;
+using MvcBlog.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -8,7 +8,7 @@ using NETCore.Encrypt.Extensions;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
-namespace LoginRegisterPage.Controllers
+namespace MvcBlog.Controllers
 {
     [Authorize]
     public class AccountController : Controller

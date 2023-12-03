@@ -1,9 +1,9 @@
-﻿using LoginRegisterPage.Models;
+﻿using MvcBlog.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace LoginRegisterPage.Controllers
+namespace MvcBlog.Controllers
 {   [Authorize]
     public class HomeController : Controller
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LoginRegisterPage.Controllers
+namespace MvcBlog.Controllers
 {
     [Authorize(Roles="admin")]
     public class AdminController : Controller

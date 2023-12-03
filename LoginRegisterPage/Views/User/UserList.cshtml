@@ -1,4 +1,4 @@
-﻿@using LoginRegisterPage.Entities
+﻿@using MvcBlog.Entities
 @model List<User>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
         {
             <tr>
                 
-                <td>@user.UserName</td>
+                 <td><a href="@Url.Action("SingleUser", "User", new { id = user.Id })">@user.UserName</a></td>
               <td>@user.NameSurname</td>
               <td>@user.CreatedAt</td>
                 <!-- Diğer kullanıcı özellikleri eklenebilir -->

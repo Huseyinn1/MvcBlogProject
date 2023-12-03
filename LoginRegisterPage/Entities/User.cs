@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LoginRegisterPage.Entities
+namespace MvcBlog.Entities
 {
     [Table("users")]
     public class User

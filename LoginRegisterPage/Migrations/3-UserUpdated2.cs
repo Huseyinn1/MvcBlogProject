@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace LoginRegisterPage.Migrations
+namespace MvcBlog.Migrations
 {
     public partial class UserUpdated2 : Migration
     {

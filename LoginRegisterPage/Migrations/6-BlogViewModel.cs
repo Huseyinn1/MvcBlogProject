@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace LoginRegisterPage.Migrations
+namespace MvcBlog.Migrations
 {
     public partial class BlogViewModel : Migration
     {

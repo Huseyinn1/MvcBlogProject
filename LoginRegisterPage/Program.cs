@@ -1,4 +1,4 @@
-using LoginRegisterPage.Entities;
+using MvcBlog.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;

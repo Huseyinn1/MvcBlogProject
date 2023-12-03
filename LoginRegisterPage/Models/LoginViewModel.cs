@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LoginRegisterPage.Models
+namespace MvcBlog.Models
 {
     public class LoginViewModel
     {

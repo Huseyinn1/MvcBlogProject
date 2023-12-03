@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using LoginRegisterPage.Entities;
-using LoginRegisterPage.Models;
+using MvcBlog.Entities;
+using MvcBlog.Models;
 
 
-namespace LoginRegisterPage
+namespace MvcBlog
 {
     public class AutoMapperConfig:Profile
     {

@@ -1,4 +1,4 @@
-@model LoginRegisterPage.Entities.Blog
+@model MvcBlog.Entities.Blog
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +75,7 @@
 
                     <div class="blog-author">
                         <div class="author-bio">
-                            <h3 class="author_name" style="font-size: 24px;"><a href="#">Author:    @Model.User.UserName</a></h3>
+                            <h3 class="author_name" style="font-size: 24px;"><a href="@Url.Action("SingleUser", "User", new { id = Model.User.Id })">Author: @Model.User.UserName</a></h3>
                             <h5 style="font-size: 18px;">@Model.User.NameSurname <a href="#"></a></h5>
 
                             <p class="author_det">
@@ -110,33 +110,26 @@
                                         </div>
                                     </div>
                                 </li>
-                              
+
                             </ul>
                         </div>
                     </div>
                     <div class="comments-form">
                         <h4>Leave a comment</h4>
                         <div class="comment-form-main">
-                            <form action="#">
+
+                            <form action="@Url.Action("AddComment", "Comment", new { id = Model.Id })" method="post">
+
+                                <input type="hidden" name="BlogId" value="@Model.Id" />
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input class="form-control" name="commenter-name" placeholder="Name" id="commenter-name" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input class="form-control" name="commenter-email" placeholder="Email" id="commenter-email" type="text">
-                                        </div>
-                                    </div>
-                                 
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <textarea class="form-control" name="commenter-message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
+                                            <label for="commenter-message">Message</label>
+                                            <textarea class="form-control" name="Metin" id="commenter-message" placeholder="Message" cols="30" rows="2"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12 post-btn">
-                                        <button class="hover-btn-new orange"><span>Post Comment</span></button>
+                                        <button class="hover-btn-new orange" type="submit"><span>Post Comment</span></button>
                                     </div>
                                 </div>
                             </form>

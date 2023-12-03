@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using LoginRegisterPage.Entities;
-using LoginRegisterPage.Models;
+using MvcBlog.Entities;
+using MvcBlog.Models;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -97,5 +97,27 @@ namespace LoginRegisterPage.Controllers
             var users =  _dataBaseContext.Users.ToList();
             return View(users);
         }
+        public ActionResult SingleUser(Guid id)
+        {
+            var user = _dataBaseContext.Users.FirstOrDefault(u => u.Id == id);
+
+            if (user == null)
+            {
+                // Kullanıcı bulunamazsa bir hata mesajı veya yönlendirme yapabilirsiniz.
+                return RedirectToAction("Index"); // Örneğin, anasayfaya yönlendir
+            }
+
+            var userBlogs = _dataBaseContext.Blogs
+        .Where(b => b.UserID == user.Id).Take(5).ToList();
+
+            ViewData["Title"] = "Profile";
+            ViewData["NameSurname"] = user.NameSurname;
+            ViewData["UserName"] = user.UserName;
+            ViewData["UserBlogs"] = userBlogs;
+
+            return View(user);
+
+        }
+
     }
 }

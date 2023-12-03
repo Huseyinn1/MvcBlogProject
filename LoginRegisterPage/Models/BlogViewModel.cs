@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoginRegisterPage.Entities
+namespace MvcBlog.Entities
 {
     public class BlogModel
     {
